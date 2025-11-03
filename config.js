@@ -1,6 +1,6 @@
 // Replace with your Alpha Vantage API key.
 // Get one for free at: https://www.alphavantage.co/support/#api-key
-const ALPHA_VANTAGE_KEY = "YOUR_API_KEY_HERE";
+const ALPHA_VANTAGE_KEY = "6Q9MB00ZQD0A8JHT";
 
 // NSE symbols (Alpha Vantage uses .NS suffix)
 const STOCK_SYMBOLS = ["RELIANCE.NS","TCS.NS","INFY.NS","HDFCBANK.NS","ICICIBANK.NS","HINDUNILVR.NS","LT.NS","BHARTIARTL.NS","AXISBANK.NS","ITC.NS","SBIN.NS","MARUTI.NS"];
