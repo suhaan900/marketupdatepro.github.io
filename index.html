@@ -12,7 +12,6 @@
     header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--green),var(--red));display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
-    .controls{display:flex;gap:8px;align-items:center}
     .btn{background:linear-gradient(90deg,var(--green),var(--red)); border:0; padding:8px 12px;border-radius:8px;color:#fff;cursor:pointer}
     .card{background:var(--card);padding:12px;border-radius:10px;margin-top:12px}
     table{width:100%;border-collapse:collapse}
@@ -22,15 +21,14 @@
     .top-right{display:flex;gap:8px;align-items:center}
     canvas{max-width:100%;height:260px}
     footer{margin-top:18px;color:#97b7a5;text-align:center}
-    /* responsive layout */
     .layout{display:grid;grid-template-columns:1fr 360px;gap:14px}
-    @media(max-width:900px){.layout{grid-template-columns:1fr}.logo{width:48px;height:48px}.controls{width:100%;justify-content:space-between}}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}.logo{width:48px;height:48px}}
   </style>
 </head>
 <body>
   <div class="top-right" style="position:fixed;right:12px;top:12px;z-index:99">
     <button id="lang-toggle" class="btn" title="Toggle Language">EN/हिं</button>
-    <label style="display:flex;align-items:center;gap:6px;color:var(--muted);margin-left:8px"><input id="auto-refresh" type="checkbox"> <span data-en>Auto-refresh</span><span data-hi style="display:none">ऑटो-रीफ़्रेश</span></label>
+    <label style="display:flex;align-items:center;gap:6px;color:var(--muted);margin-left:8px"><input id="auto-refresh" type="checkbox"> <span data-en>Auto-refresh</span><span data-hi style="display:none">ऑटो-रीफ़्रेश</span></label>
   </div>
 
   <header>
@@ -41,9 +39,7 @@
         <div style="color:var(--muted);font-size:13px">By Mohd Suhaan 900</div>
       </div>
     </div>
-    <div class="controls">
-      <button id="load-live" class="btn">Load Live</button>
-    </div>
+    <button id="load-live" class="btn">Load Live</button>
   </header>
 
   <div class="layout">
@@ -51,30 +47,11 @@
       <section class="card">
         <h2 data-en>Market Signals</h2>
         <h2 data-hi style="display:none">बाज़ार सिग्नल्स</h2>
-        <div style="overflow:auto">
-          <table>
-            <thead><tr><th>Stock</th><th>Price</th><th>Signal</th><th>Target</th><th>SL</th></tr></thead>
-            <tbody id="signals-list"><tr><td colspan="5">No data loaded. Click 'Load Live'.</td></tr></tbody>
-          </table>
-        </div>
+        <table>
+          <thead><tr><th>Stock</th><th>Price</th><th>Signal</th><th>Target</th><th>SL</th></tr></thead>
+          <tbody id="signals-list"><tr><td colspan="5">Click ‘Load Live’</td></tr></tbody>
+        </table>
         <div style="margin-top:8px;color:var(--muted)">Last updated: <span id="last-updated">-</span></div>
-      </section>
-
-      <section class="card">
-        <h2 data-en>Market News</h2>
-        <h2 data-hi style="display:none">बाज़ार समाचार</h2>
-        <ul id="news-list">
-          <li data-en>Sensex up on global cues</li>
-          <li data-hi style="display:none">Sensex वैश्विक संकेतों पर बढ़ा</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2 data-en>Shaadi Updates</h2>
-        <h2 data-hi style="display:none">शादी अपडेट्स</h2>
-        <ul id="shaadi-list">
-          <li>Rahul & Sneha — 10 Nov — Lucknow</li>
-        </ul>
       </section>
     </main>
 
@@ -84,15 +61,6 @@
         <h3 data-hi style="display:none">प्राइस चार्ट</h3>
         <div id="chart-status" style="color:var(--muted);margin-bottom:8px">Chart not loaded</div>
         <canvas id="priceChart"></canvas>
-        <div style="margin-top:8px;color:var(--muted)">Chart symbol: <strong id="chart-symbol">RELIANCE.NS</strong></div>
-      </section>
-
-      <section class="card">
-        <h3 data-en>Subscribe</h3>
-        <h3 data-hi style="display:none">सब्सक्राइब</h3>
-        <p data-en>Join our Telegram for daily signals</p>
-        <p data-hi style="display:none">दैनिक सिग्नल्स के लिए हमारे Telegram में शामिल हों</p>
-        <p><a href="mailto:info@marketupdatepro.com" style="color:var(--muted)">info@marketupdatepro.com</a></p>
       </section>
     </aside>
   </div>
